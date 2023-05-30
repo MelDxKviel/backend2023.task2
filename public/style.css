@@ -1,0 +1,94 @@
+th, td, table {
+    border: 1px solid;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+img {
+    width: 220px;
+    overflow: hidden;
+    max-height: 150px;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+tr:hover {
+    background-color: #d6eeeead;
+}
+
+.cart__button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.goback {
+    background-color: #1531af;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.cart {
+    margin-bottom: 15px;
+}
+
+.add__button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add__button:hover {
+    background-color: #51da56;
+}
+
+.add__button:active{
+    background-color:#15701a;
+}
+
+.remove__button {
+    background-color: #ca3b3b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.remove__button:hover {
+    background-color: #f37373;
+}
+
+.remove__button:active{
+    background-color:#962828;
+}

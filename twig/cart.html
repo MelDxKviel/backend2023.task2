@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Cart</title>
+</head>
+<body>
+    <div class="totals">
+        <p>Products amount : <span id="total-quantity"></span></p>
+        <p>Total price: <span id="total-price"></span></p>
+    </div>
+    <table class="table container">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Image</th>
+                <th>Summary</th>
+                <th>Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cart_item in cart_products %}
+            <tr>
+                <td>{{ cart_item.name }}</td>
+                <td class="price">{{ cart_item.price }}</td>
+                <td class="quantity">{{ cart_item.quantity }}</td>
+                <td><img src="{{ cart_item.image }}" class="table__image"></td>
+                <td class="total">{{ cart_item.quantity * cart_item.price }}</td>
+                <td>
+                  <form method="post" action="remove-cart">
+                      <input type="hidden" name="product_id" value="{{ cart_item.id }}">
+                      <button type="submit" class="remove__button">Remove</button>
+                  </form>
+              </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="/products" class="goback">Go back</a>
+    <script src="cart.js"></script>
+</body>
+</html>
